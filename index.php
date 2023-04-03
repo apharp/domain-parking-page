@@ -1,5 +1,10 @@
 <?php
-    $rnd = rand (1,2);
+$scan = preg_grep('/^([^.])/', scandir("images/"));
+$i = array_rand($scan);
+
+$selectedBg = $scan[$i];
+
+//echo $selectedBg;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +23,7 @@
       margin: 0;
       padding: 0;
       background-color: #292929;
-      background-image: url(img<?php echo $rnd ?>.jpg);
+      background-image: url(images/<?php echo $selectedBg ?>);
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
