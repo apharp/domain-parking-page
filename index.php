@@ -1,4 +1,6 @@
 <?php
+   $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+    $domainName = $_SERVER['HTTP_HOST'].'/';
 $scan = preg_grep('/^([^.])/', scandir("images/"));
 $i = array_rand($scan);
 
@@ -23,7 +25,7 @@ $selectedBg = $scan[$i];
       margin: 0;
       padding: 0;
       background-color: #292929;
-      background-image: url(images/<?php echo $selectedBg ?>);
+      background-image: url(<?php echo $protocol.$domainName . 'images/' . $selectedBg ?>);
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -77,7 +79,15 @@ $selectedBg = $scan[$i];
 
 
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NYBBYYBM9D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-NYBBYYBM9D');
+</script>
 <body>
   <div class="container">
     <header class="block">
