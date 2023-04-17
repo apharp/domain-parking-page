@@ -96,7 +96,7 @@ $selectedBg = $scan[$i];
       </div>
     </header>
     <footer>
-      <p>This domain is currently parked.</p>
+      <p>This domain is currently parked. <a href="https://www.cloudns.net/aff/id/54697/" target="_blank">DNS is hosted by ClouDNS.</a></p>
     </footer>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fitty/2.3.2/fitty.min.js"></script>
