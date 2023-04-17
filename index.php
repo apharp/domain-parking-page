@@ -75,6 +75,14 @@ $selectedBg = $scan[$i];
     p {
       line-height: 1.625;
     }
+
+a:link, a:visited, a:hover, a:active {
+  //color: white;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: transparent;
+  text-decoration: none;
+}
+
   </style>
 
 
